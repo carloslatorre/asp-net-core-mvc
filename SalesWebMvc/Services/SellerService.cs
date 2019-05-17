@@ -18,7 +18,10 @@ namespace SalesWebMvc.Services {
             return _context.Seller.ToList();
         }
 
-
+        public void Insert(Seller sell) {
+            _context.Add(sell);
+            _context.SaveChanges();
+        }
 
 
 
