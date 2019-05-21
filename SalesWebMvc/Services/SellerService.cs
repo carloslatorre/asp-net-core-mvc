@@ -20,7 +20,7 @@ namespace SalesWebMvc.Services {
 
         public void Insert(Seller sell) {
 
-            sell.Depto = _context.Department.Last();
+            
             _context.Add(sell);
             _context.SaveChanges();
         }
