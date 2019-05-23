@@ -38,7 +38,7 @@ namespace SalesWebMvc.Controllers {
         public IActionResult Create(Seller seller) {
             if (!ModelState.IsValid) {
                 var departments = _departmentService.FindAll();
-                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments }
+                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
                 return View(viewModel);
             }
             _sellerservice.Insert(seller);
@@ -98,7 +98,7 @@ namespace SalesWebMvc.Controllers {
         public IActionResult Edit(int id, Seller seller) {
             if (!ModelState.IsValid) {
                 var departments = _departmentService.FindAll();
-                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments}
+                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
                 return View(viewModel);
             }
             if (id != seller.Id) {
